@@ -1,14 +1,14 @@
 package com.horcrux.hufflepuff;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 public class QuadraticEquations {
 
     public static Roots findRoots(double a, double b, double c) {
 //        throw new UnsupportedOperationException("Waiting to be implemented.");
 
-        final Logger log = LoggerFactory.getLogger(QuadraticEquations.class.getName());
+        final Logger log = Logger.getLogger(Roots.class.getName());
 
         double result = b * b - 4.0 * a * c;
 
