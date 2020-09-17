@@ -1,0 +1,21 @@
+1. Merge Names
+
+Implement the uniqueNames method. When passed two arrays of names, it will return an array containing the names that appear in either or both arrays. The returned array should have no duplicates.
+
+For example, calling MergeNames.uniqueNames(new String[]{'Ava', 'Emma', 'Olivia'}, new String[]{'Olivia', 'Sophia', 'Emma'}) should return an array containing Ava, Emma, Olivia, and Sophia in any order.
+
+2. Quadratic Equation
+
+Implement the function findRoots to find the roots of the quadratic equation: ax2 + bx + c = 0. If the equation has only one solution, the function should return that solution as both elements of the Roots. The equation will always have at least one solution.
+
+The roots of the quadratic equation can be found with the following formula: A quadratic equation.
+
+For example, the roots of the equation 2x2 + 10x + 8 = 0 are -1 and -4.
+
+11. Alert Service
+
+Refactor the AlertService and MapAlertDAO classes:
+Create a new package-private interface, named AlertDAO, that contains the same methods as MapAlertDAO.
+MapAlertDAO should implement the AlertDAO interface.
+AlertService should have a constructor that accepts AlertDAO.
+The raiseAlert and getAlertTime methods should use the object passed through the constructor.
