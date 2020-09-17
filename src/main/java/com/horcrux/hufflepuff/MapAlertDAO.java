@@ -14,13 +14,13 @@ class MapAlertDAO implements AlertDAO {
 
     public UUID addAlert(Date time) {
         UUID id = UUID.randomUUID();
-        log.debug("id: , time:" + id + time);
+        log.debug("addAlert time: id:" + time + id);
         this.alerts.put(id, time);
         return id;
     }
 
     public Date getAlert(UUID id) {
-        log.debug("id:" + id);
+        log.debug("getAlert id:" + id);
         return this.alerts.get(id);
     }
 

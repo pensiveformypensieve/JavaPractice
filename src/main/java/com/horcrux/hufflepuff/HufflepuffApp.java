@@ -17,10 +17,10 @@ public class HufflepuffApp {
         Roots roots = QuadraticEquations.findRoots(2, 10, 8);
         System.out.println("Roots: " + roots.x1 + ", " + roots.x2);
 
-        AlertDAO storage = new MapAlertDAO();
+        MapAlertDAO storage = new MapAlertDAO();
         Alert alert = new Alert(storage);
         UUID raiseAlert = alert.raiseAlert();
-        Date alertTime = alert.getAlertTime(UUID.randomUUID());
+        Date alertTime = alert.getAlertTime(raiseAlert);
         System.out.println("alert time=" + alertTime + "raise alert UUID:" + raiseAlert);
     }
 }
