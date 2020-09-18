@@ -20,7 +20,7 @@ MapAlertDAO should implement the AlertDAO interface.
 AlertService should have a constructor that accepts AlertDAO.
 The raiseAlert and getAlertTime methods should use the object passed through the constructor.
 
-12. SQL question
+Q12:
 
 -- Suggested testing environment:
 -- http://sqlite.online/
