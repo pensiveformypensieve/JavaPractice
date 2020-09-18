@@ -19,3 +19,48 @@ Create a new package-private interface, named AlertDAO, that contains the same m
 MapAlertDAO should implement the AlertDAO interface.
 AlertService should have a constructor that accepts AlertDAO.
 The raiseAlert and getAlertTime methods should use the object passed through the constructor.
+
+12. SQL question
+
+-- Suggested testing environment:
+-- http://sqlite.online/
+
+-- Example case create statement:
+CREATE TABLE employees (
+  id INTEGER NOT NULL PRIMARY KEY,
+  name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE sales (
+  employeeId INTEGER NOT NULL REFERENCES employees(id), 
+  value INTEGER NOT NULL CHECK(value > 0)
+);
+
+INSERT INTO employees(id, name) VALUES(1, 'John');
+INSERT INTO employees(id, name) VALUES(2, 'Mark');
+INSERT INTO employees(id, name) VALUES(3, 'Jane');
+
+INSERT INTO sales(employeeId, value) VALUES(1, 100);
+INSERT INTO sales(employeeId, value) VALUES(3, 300);
+
+-- Expected output:
+-- name
+-- ----
+-- Mark
+
+-- Explanation:
+-- In this example.
+-- John and Jane both have sales. Only Mark has no sales.
+
+--find the name of the employee with no sales.
+
+Q6:
+
+Write a method that, efficiently with respect to time used, finds the first name in an array that occurs only once in that array. If there are no unique names in the array, null should be returned.
+
+For example, firstUniqueName(new String[]{"Abbi", "Adeline", "Abbi", "Adalia"}) should return "Adeline".
+
+Q5:
+
+
+
