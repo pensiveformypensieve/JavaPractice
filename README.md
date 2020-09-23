@@ -81,3 +81,7 @@ Validate username to only allow first character as a letter, a single optional d
 Q:
 
 Check if a programming teacher teaches a certain language. If yes, teach the programmer student.
+
+Q:
+
+Set product quantity to be 1 if quantity passed in is less than 1. 
