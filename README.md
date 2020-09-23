@@ -70,3 +70,14 @@ Using JUnit Assert class, write test for the Shelf class covering the following 
 
 Each of the test case methods should be in the ShelfTester class and have Test attributes.
 
+Q:
+
+Make the Utilities class unextendable and non-instantiateable(?)
+
+Q:
+
+Validate username to only allow first character as a letter, a single optional dash, but not at the end, min. length 6 and max. length 16
+
+Q:
+
+Check if a programming teacher teaches a certain language. If yes, teach the programmer student.
