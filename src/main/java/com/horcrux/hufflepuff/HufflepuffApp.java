@@ -35,6 +35,25 @@ public class HufflepuffApp {
     System.out.println(Username.validate("Mike Standish")); // Invalid username
 
     System.out.println(Uniquename.firstUniqueName(new String[]{"Abbi", "Adeline", "Abbi", "Adalia"}));
+
+    Hourglass hg = new Hourglass();
+    Scanner console = new Scanner(System.in);
+    System.out.println("Enter an integer greater than or equal to 2");
+    int n = 0;
+    try {
+    n = console.nextInt();
+    }
+    catch (InputMismatchException e) {
+    e.getMessage();
+    }
+    if (n < 2) {
+    System.out.println("Invalid input");
+     }
+    else {
+    System.out.println("");
+    hg.hourglass(n);
+    System.out.println("");
+        }
     }
 }
 
