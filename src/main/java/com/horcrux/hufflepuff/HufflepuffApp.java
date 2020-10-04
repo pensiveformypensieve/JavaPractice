@@ -1,11 +1,14 @@
 package com.horcrux.hufflepuff;
 
 import java.util.*;
+import org.apache.log4j.Logger;
 
 
 public class HufflepuffApp {
 
     public static void main(String[] args) {
+
+    final Logger log = Logger.getLogger(HufflepuffApp.class.getName());
 
     String[] names1 = new String[] {"Ava", "Emma", "Olivia"};
     String[] names2 = new String[] {"Olivia", "Sophia", "Emma"};
@@ -22,14 +25,17 @@ public class HufflepuffApp {
     Date alertTime = alert.getAlertTime(raiseAlert);
     System.out.println("alert time=" + alertTime + "raise alert UUID:" + raiseAlert);
 
+    log.debug("adding new teacher");
     ProgrammerTeacher teacher = new ProgrammerTeacher();
     teacher.addLanguage("Java");
 
+    log.debug("adding new student");
     Programmer programmer = new Programmer();
     teacher.teach(programmer, "Java");
 
-    for(String language : programmer.getLanguages())
+    for(String language : programmer.getLanguages()) {
         System.out.println(language);
+    }
 
     System.out.println(Username.validate("Mike-Standish")); // Valid username
     System.out.println(Username.validate("Mike Standish")); // Invalid username

@@ -16,7 +16,6 @@ public class Hourglass {
             String j = Integer.toString(i);
 //            s += " *";
             num += " " + (i+1);
-
         }
 
         //print space
