@@ -7,13 +7,15 @@ public class Hourglass {
     final Logger log = Logger.getLogger(Hourglass.class.getName());
 
     public void hourglass(int n) {
-        String s = "";
+//        String s = "";
+        String num = "";
 
         //print number
         for (int i = 0; i < n; i++) {
             log.debug("i: " + i);
             String j = Integer.toString(i);
-            s += " *";
+//            s += " *";
+            num += " " + (i+1);
 
         }
 
@@ -29,7 +31,8 @@ public class Hourglass {
             //prints spaces from i
             System.out.print(w.substring(i));
             //prints stars from (n-1)*2
-            System.out.println(s.substring((n - i) * 2));
+//            System.out.println(s.substring((n - i) * 2));
+            System.out.println(num.substring((n - i) * 2));
         }
 
         //print bottom triangle
@@ -37,7 +40,8 @@ public class Hourglass {
             //prints spaces from i
             System.out.print(w.substring(i));
             //prints stars from (n-1)*2
-            System.out.println(s.substring((n - i) * 2));
+//            System.out.println(s.substring((n - i) * 2));
+            System.out.println(num.substring((n - i) * 2));
         }
     }
 
