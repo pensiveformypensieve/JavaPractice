@@ -1,5 +1,6 @@
 package com.horcrux.hufflepuff;
 
+import java.time.LocalDate;
 import java.util.*;
 import org.apache.log4j.Logger;
 
@@ -60,6 +61,14 @@ public class HufflepuffApp {
     hg.hourglass(n);
     System.out.println("");
         }
+
+        LocalDate dob = LocalDate.of(1900,9,17);
+        LocalDate today = LocalDate.now();
+        AgeCalculator ac = new AgeCalculator();
+        String age = ac.calculateAgeFromBirthdate(dob, today);
+        System.out.println(age);
+
     }
+
 }
 
