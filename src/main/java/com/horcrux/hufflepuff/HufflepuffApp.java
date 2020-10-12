@@ -44,6 +44,26 @@ public class HufflepuffApp {
     System.out.println(Uniquename.firstUniqueName(new String[]{"Abbi", "Adeline", "Abbi", "Adalia"}));
 
     Hourglass hg = new Hourglass();
+    //for loop
+    Scanner console1 = new Scanner(System.in);
+    System.out.println("Enter an integer greater than or equal to 2");
+    int n1 = 0;
+    try {
+    n1 = console1.nextInt();
+    }
+    catch (InputMismatchException e) {
+    e.getMessage();
+    }
+    if (n1 < 2) {
+    System.out.println("Invalid input");
+    }
+    else {
+    System.out.println("");
+    hg.hourglass(n1);
+    System.out.println("");
+    }
+
+    //recursive
     Scanner console = new Scanner(System.in);
     System.out.println("Enter an integer greater than or equal to 2");
     int n = 0;
@@ -55,18 +75,19 @@ public class HufflepuffApp {
     }
     if (n < 2) {
     System.out.println("Invalid input");
-     }
+    }
     else {
     System.out.println("");
-    hg.hourglass(n);
+    hg.hourglassRecursive(0,n,1);
     System.out.println("");
-        }
+    }
 
-        LocalDate dob = LocalDate.of(1900,9,17);
-        LocalDate today = LocalDate.now();
-        AgeCalculator ac = new AgeCalculator();
-        String age = ac.calculateAgeFromBirthdate(dob, today);
-        System.out.println(age);
+
+    LocalDate dob = LocalDate.of(1900,9,17);
+    LocalDate today = LocalDate.now();
+    AgeCalculator ac = new AgeCalculator();
+    String age = ac.calculateAgeFromBirthdate(dob, today);
+    System.out.println(age);
 
     }
 
