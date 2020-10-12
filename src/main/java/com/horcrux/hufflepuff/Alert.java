@@ -5,24 +5,24 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import org.apache.log4j.Logger;
 
 public class Alert {
 
-    private AlertDAO alertDAO;
+//    private final MapAlertDAO storage = new MapAlertDAO();
+    private AlertDAO storage;
 
-    public Alert(AlertDAO alertDAO) {
-        this.alertDAO = alertDAO;
+    final Logger log = Logger.getLogger(Alert.class.getName());
+
+    public Alert(AlertDAO storage) {
+        this.storage = storage;
     }
 
-    private final MapAlertDAO storage = new MapAlertDAO();
-
-        public UUID raiseAlert() {
-            //TODO - include alertDAO
+    public UUID raiseAlert() {
             return this.storage.addAlert(new Date());
         }
 
         public Date getAlertTime(UUID id) {
-            //TODO - include alertDAO
             return this.storage.getAlert(id);
         }
     }
