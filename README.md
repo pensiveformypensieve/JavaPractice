@@ -85,3 +85,11 @@ Check if a programming teacher teaches a certain language. If yes, teach the pro
 Q:
 
 Set product quantity to be 1 if quantity passed in is less than 1. 
+
+Q:
+
+List<Integer> list = Arrays.asList(1,3,45,2,48,6,34,45,65,21,34,56,2,56,98,48);
+1. Sum the list and find min and max number;
+2. Sort the list
+3. Delete all even
+4. remove duplicate data
